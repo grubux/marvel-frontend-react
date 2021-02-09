@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-// components
 import Charactersbody from "../components/Charactersbody";
 import ComicsBody from "../components/ComicsBody";
 

@@ -7,13 +7,10 @@ import "../App.css";
 import PageTitleCharactersComics from "../components/PageTitleCharactersComics";
 import ComicsPageAboutCharacter from "../components/ComicsPageAboutCharacter";
 import ComicsPageAboutComics from "../components/ComicsPageAboutComics";
-// import Pagination from "../components/Pagination";
 
 const ComicsId = ({ toggleComicFavorite, toggleCharFavorite }) => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  // const [name, setName] = useState("");
-  // const [page, setPage] = useState(1);
 
   const params = useParams();
 
@@ -24,7 +21,6 @@ const ComicsId = ({ toggleComicFavorite, toggleCharFavorite }) => {
         .then((response) => {
           setData(response.data);
           setIsLoading(false);
-          // console.log(response.data);
         })
         .catch((error) => {
           console.log(error);
@@ -41,7 +37,6 @@ const ComicsId = ({ toggleComicFavorite, toggleCharFavorite }) => {
   ) : (
     <>
       <div className="wrapper">
-        {/* <Header /> */}
         <PageTitleCharactersComics name={data[0].name} />
         <div className="wrapper">
           <div className="wrapper-body-comic-page">

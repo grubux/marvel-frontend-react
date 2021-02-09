@@ -3,14 +3,7 @@ import { useHistory } from "react-router-dom";
 import "../Reset.css";
 import "../App.css";
 
-const Charactersbody = ({
-  // name,
-  // setName,
-  // handleSubmit,
-  data,
-  // setFavorites,
-  toggleCharFavorite,
-}) => {
+const Charactersbody = ({ data, toggleCharFavorite }) => {
   const history = useHistory();
   return (
     <>

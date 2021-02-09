@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { useState } from "react";
+// import { useState } from "react";
 
 import Characters from "./containers/Characters";
 import Comics from "./containers/Comics";
@@ -10,9 +10,9 @@ import "./Reset.css";
 import "./App.css";
 
 const App = () => {
-  //
-  const [favorite, setFavorite] = useState("white");
-  const [oneComic, setOneComic] = useState(true);
+  // Add a color change for the star for saving Comics and Characters
+  // const [favorite, setFavorite] = useState("white");
+  // const [oneComic, setOneComic] = useState(true);
 
   const toggleCharFavorite = (characterFav) => {
     const favorites = JSON.parse(localStorage.getItem("favorites_chars"))
@@ -28,7 +28,6 @@ const App = () => {
       : [];
     favorites.push(characterFav);
     localStorage.setItem("favorites_comics", JSON.stringify(favorites));
-    setOneComic(false);
   };
   //
 

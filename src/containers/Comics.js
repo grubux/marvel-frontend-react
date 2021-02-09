@@ -37,7 +37,6 @@ const Comics = ({ toggleComicFavorite }) => {
         .then((response) => {
           setData(response.data);
           setIsLoading(false);
-          //   console.log(response.data.results);
         })
         .catch((error) => {
           console.log(error);
@@ -52,7 +51,6 @@ const Comics = ({ toggleComicFavorite }) => {
   ) : (
     <>
       <div className="wrapper">
-        {/* <Header /> */}
         <PageTitleComics />
         <PaginationComic
           page={comicsPage}

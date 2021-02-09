@@ -46,12 +46,10 @@ const Characters = ({ toggleCharFavorite }) => {
     fetchData();
   }, [page]);
 
-  // console.log(data);
   return isLoading ? (
     <div>Loading...</div>
   ) : (
     <>
-      {/* <Header /> */}
       <PageTitleCharacters />
       <Pagination page={page} count={data[1]} paginate={paginate} />
       <Search name={name} setName={setName} handleSubmit={handleSubmit} />

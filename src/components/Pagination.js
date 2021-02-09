@@ -4,7 +4,6 @@ const Pagination = ({ page, setPage, count, paginate }) => {
   for (let i = 1; i <= Math.ceil(count.count / 100); i++) {
     pageNumbers.push(i);
   }
-  // console.log(pageNumbers);
 
   return (
     <div className="wrapper max-width">

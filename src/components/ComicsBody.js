@@ -1,14 +1,7 @@
 import "../Reset.css";
 import "../App.css";
 
-const ComicsBody = ({
-  name,
-  setName,
-  handleSubmit,
-  data,
-  toggleComicFavorite,
-  oneComic,
-}) => {
+const ComicsBody = ({ data, toggleComicFavorite, oneComic }) => {
   console.log(data);
   return oneComic ? (
     <div>No comics saved ! </div>

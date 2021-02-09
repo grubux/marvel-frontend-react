@@ -5,7 +5,6 @@ import more from "../assets/more.svg";
 
 import "../Reset.css";
 import "../App.css";
-//BEST PRACTIVE FOR MENU LINKS ?
 
 const Header = () => {
   const [show, setShow] = useState("none");

@@ -3,20 +3,11 @@ import { useHistory } from "react-router-dom";
 import "../Reset.css";
 import "../App.css";
 
-const ComicsPageAboutComics = ({
-  //   name,
-  //   setName,
-  //   handleSubmit,
-  data,
-  toggleComicFavorite,
-}) => {
+const ComicsPageAboutComics = ({ data, toggleComicFavorite }) => {
   const history = useHistory();
 
-  // console.log(data[1]);
   return (
     <>
-      {/* <div className="wrapper"> */}
-      {/* <div className="wrapper-body-comic-page"> */}
       <div clasSName="wrapper-comics-page">
         <ul className="list-comic">
           {data[1].map((comic, index) => {
@@ -58,9 +49,7 @@ const ComicsPageAboutComics = ({
             );
           })}
         </ul>
-        {/* </div> */}
       </div>
-      {/* </div> */}
     </>
   );
 };

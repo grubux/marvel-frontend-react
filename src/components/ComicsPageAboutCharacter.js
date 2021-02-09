@@ -1,28 +1,26 @@
-// import { useHistory } from "react-router-dom";
-
 import "../Reset.css";
 import "../App.css";
 
-const ComicsPageAboutCharacter = ({ name, setName, handleSubmit, data, toggleCharFavorite }) => {
-  // const history = useHistory();
-
-  // console.log(data);
-
-  console.log(data[0])
+const ComicsPageAboutCharacter = ({
+  name,
+  setName,
+  handleSubmit,
+  data,
+  toggleCharFavorite,
+}) => {
+  console.log(data[0]);
 
   return (
     <>
-      {/* <div clasSName="wrapper-comics-page"> */}
       <div className="character-comic-page">
         <div>
           <svg
             onClick={() => {
-              let comics = []
+              let comics = [];
               for (let i = 0; i < data[1].length; i++) {
-                console.log(data[1].length)
-                console.log(data[1][i])
-                comics.push(data[1][i].comicId)
-
+                console.log(data[1].length);
+                console.log(data[1][i]);
+                comics.push(data[1][i].comicId);
               }
               toggleCharFavorite({
                 comics: comics,
@@ -51,7 +49,6 @@ const ComicsPageAboutCharacter = ({ name, setName, handleSubmit, data, toggleCha
           {data[0].description}
         </div>
       </div>
-      {/* </div> */}
     </>
   );
 };
