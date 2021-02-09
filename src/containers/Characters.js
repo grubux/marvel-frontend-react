@@ -50,17 +50,19 @@ const Characters = ({ toggleCharFavorite }) => {
     <div>Loading...</div>
   ) : (
     <>
-      <PageTitleCharacters />
-      <Pagination page={page} count={data[1]} paginate={paginate} />
-      <Search name={name} setName={setName} handleSubmit={handleSubmit} />
-      <Charactersbody
-        name={name}
-        setName={setName}
-        handleSubmit={handleSubmit}
-        data={data[0]}
-        toggleCharFavorite={toggleCharFavorite}
-      />
-      <Pagination page={page} count={data[1]} paginate={paginate} />
+      <div className="wrapper">
+        <PageTitleCharacters />
+        <Pagination page={page} count={data[1]} paginate={paginate} />
+        <Search name={name} setName={setName} handleSubmit={handleSubmit} />
+        <Charactersbody
+          name={name}
+          setName={setName}
+          handleSubmit={handleSubmit}
+          data={data[0]}
+          toggleCharFavorite={toggleCharFavorite}
+        />
+        <Pagination page={page} count={data[1]} paginate={paginate} />
+      </div>
     </>
   );
 };

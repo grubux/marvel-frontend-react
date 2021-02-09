@@ -3,7 +3,7 @@ import "../App.css";
 
 const PageTitleCharacters = () => {
   return (
-    <div className="wrapper max-width ">
+    <div className="wrapper-title">
       <h1 className="h1-characters">MARVEL Characters</h1>
     </div>
   );
