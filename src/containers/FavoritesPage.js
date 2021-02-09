@@ -31,7 +31,7 @@ const FavoritesPage = ({ toggleCharFavorite, toggleComicFavorite }) => {
 
   const handleSubmit = async () => {
     await axios
-      .get(`http://localhost:3001/characters?name=${favoritesChar}`)
+      .get(`https://grubux-marvel.herokuapp.com/?name=${favoritesChar}`)
       .then((response) => {
         setFavoritesChar(response.favoritesChar);
         setIsLoading(false);

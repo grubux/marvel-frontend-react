@@ -16,7 +16,7 @@ const Comics = ({ toggleComicFavorite }) => {
 
   const handleSubmit = async () => {
     await axios
-      .get(`http://localhost:3001/comics?title=${title}`)
+      .get(`https://grubux-marvel.herokuapp.com/comics?title=${title}`)
       .then((response) => {
         setData(response.data);
         setIsLoading(false);
@@ -33,7 +33,7 @@ const Comics = ({ toggleComicFavorite }) => {
   useEffect(() => {
     const fetchData = async (req, res) => {
       await axios
-        .get(`http://localhost:3001/comics?page=${comicsPage}`)
+        .get(`https://grubux-marvel.herokuapp.com/comics?page=${comicsPage}`)
         .then((response) => {
           setData(response.data);
           setIsLoading(false);

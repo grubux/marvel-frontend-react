@@ -16,7 +16,7 @@ const Characters = ({ toggleCharFavorite }) => {
 
   const handleSubmit = async () => {
     await axios
-      .get(`http://localhost:3001/characters?name=${name}`)
+      .get(`https://grubux-marvel.herokuapp.com/characters?name=${name}`)
       .then((response) => {
         setData(response.data);
         setIsLoading(false);
@@ -33,7 +33,7 @@ const Characters = ({ toggleCharFavorite }) => {
   useEffect(() => {
     const fetchData = async (req, res) => {
       await axios
-        .get(`http://localhost:3001/characters?page=${page}`)
+        .get(`https://grubux-marvel.herokuapp.com/characters?page=${page}`)
         .then((response) => {
           setData(response.data);
           setIsLoading(false);

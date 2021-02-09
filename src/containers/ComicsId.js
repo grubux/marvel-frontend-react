@@ -17,7 +17,7 @@ const ComicsId = ({ toggleComicFavorite, toggleCharFavorite }) => {
   useEffect(() => {
     const fetchData = async (req, res) => {
       await axios
-        .get(`http://localhost:3001/comics/${params.characterid}`)
+        .get(`https://grubux-marvel.herokuapp.com/comics/${params.characterid}`)
         .then((response) => {
           setData(response.data);
           setIsLoading(false);
